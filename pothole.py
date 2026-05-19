@@ -227,7 +227,7 @@ Repository contents:
             with col1:
                 st.subheader("Original Image")
                 original_image = Image.open(uploaded_file)
-                st.image(original_image, use_container_width=True)
+                st.image(original_image, use_column_width=True)
             
             if st.button("🔍 Detect Potholes", type="primary", use_container_width=True):
                 with st.spinner("Processing image..."):
@@ -237,7 +237,7 @@ Repository contents:
                     if processed is not None:
                         with col2:
                             st.subheader("Detection Result")
-                            st.image(processed, use_container_width=True)
+                            st.image(processed, use_column_width=True)
                         
                         # Display detection info
                         st.markdown('<div class="detection-info">', unsafe_allow_html=True)
@@ -297,7 +297,7 @@ Repository contents:
                     processed_frame = self.resize_with_aspect_ratio(processed_frame)
                     
                     # Display frame
-                    frame_placeholder.image(processed_frame, use_container_width=True)
+                    frame_placeholder.image(processed_frame, use_column_width=True)
                     
                     # Update progress
                     frame_count += 1
